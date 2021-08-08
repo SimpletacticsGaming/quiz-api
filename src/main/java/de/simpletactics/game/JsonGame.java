@@ -28,4 +28,24 @@ public class JsonGame {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public int getBank() {
+        return bank;
+    }
+
+    public int getTurn() {
+        return turn;
+    }
 }

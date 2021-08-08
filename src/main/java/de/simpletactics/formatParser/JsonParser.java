@@ -7,15 +7,9 @@ import de.simpletactics.game.JsonGame;
 
 public class JsonParser implements Parser{
 
-    @Override
-    public void parse(Game game) {
+    public String parse(JsonGame game) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        System.out.println(gson.toJson(game));
-    }
-
-    public void parse(JsonGame game) {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        System.out.println(gson.toJson(game));
+        return gson.toJson(game);
     }
 
     @Override
