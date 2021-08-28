@@ -95,7 +95,7 @@ public class Game {
     public void correct() throws SQLException {
         int[] arrPoints = {1, 2, 4, 6, 9, 12, 15, 18, 21, 25};
         this.points = arrPoints[turn];
-        if (arrPoints.length > this.turn){
+        if (arrPoints.length-1 > this.turn){
             this.turn++;
         }
         nextQuestion();
