@@ -66,7 +66,7 @@ public class Game {
         this.turn = 0;
     }
 
-    private Question nextQuestion() throws SQLException {
+    public Question nextQuestion() throws SQLException {
         if (qs.isEmpty()){
             ql.load(qs);
         }
