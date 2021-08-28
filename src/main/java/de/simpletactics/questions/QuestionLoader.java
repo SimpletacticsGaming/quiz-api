@@ -29,8 +29,11 @@ public class QuestionLoader {
                 "ORDER BY RAND() LIMIT "+ amountOfQuestions);
 
         if ( size(rs) < amountOfQuestions ){
-            System.out.println("Nicht genügend Fragen in der Datenbank vorhanden!");
+            rs = state.executeQuery("SELECT f.* FROM quiz_fragen AS f LEFT JOIN quiz_connection AS c ON f.id = c.frage_id " +
+                    "LEFT JOIN quiz_game AS g ON c.game_id = g.id" +
+                    "ORDER BY RAND() LIMIT " + 50);
         }
+
 
         try{
             //Create question object and add it to the stack
