@@ -31,6 +31,22 @@ public class Game {
         openGame();
     }
 
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+    public int getBank() {
+        return bank;
+    }
+
+    public void setBank(int bank) {
+        this.bank = bank;
+    }
+
     private void openGame() throws SQLException {
         Statement state = this.con.getCon().createStatement();
         ResultSet rs = state.executeQuery("SELECT id + 1 AS id FROM quiz_game ORDER BY id desc limit 1");
